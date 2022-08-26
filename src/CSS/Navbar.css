@@ -1,0 +1,28 @@
+.navbar
+{
+    display: flex;
+ 
+    justify-content: space-evenly;
+  
+   background-color: rgb(214, 236, 255);
+   padding: 10px;
+  
+
+}
+
+
+
+
+*
+{
+    text-decoration: none;
+    color: black
+}
+
+
+.activeClass
+{
+    border-bottom: 1px black solid;
+}
+
+
