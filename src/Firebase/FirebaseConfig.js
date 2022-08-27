@@ -1,19 +1,17 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getDatabase } from "firebase/database";
 
-// Your web app's Firebase configuration
+// TODO: Replace the following with your app's Firebase project configuration
+// See: https://firebase.google.com/docs/web/learn-more#config-object
 const firebaseConfig = {
-  apiKey: "AIzaSyA7sfmzrW74hpVVq_hJtkFtnzlMOVtBxck",
-  authDomain: "taskmanagementapp-382d9.firebaseapp.com",
+  // ...
+  // The value of `databaseURL` depends on the location of the database
   databaseURL: "https://taskmanagementapp-382d9-default-rtdb.firebaseio.com",
-  projectId: "taskmanagementapp-382d9",
-  storageBucket: "taskmanagementapp-382d9.appspot.com",
-  messagingSenderId: "330645852678",
-  appId: "1:330645852678:web:28cb64b2bc1368a012e987"
 };
 
 // Initialize Firebase
-const RealTimeDataBase = initializeApp(firebaseConfig);
-export {RealTimeDataBase};
+const app = initializeApp(firebaseConfig);
+
+
+// Initialize Realtime Database and get a reference to the service
+export const RealTimeDataBase = getDatabase(app);
